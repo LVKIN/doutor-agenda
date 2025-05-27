@@ -1,9 +1,13 @@
 "use client"
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger
+} from "@/components/ui/tabs";
 import SignUpForm from "./components/SignUpForm";
+import SignInForm from "./components/SignInForm";
 
 export default function Authentication() {
 
@@ -15,19 +19,7 @@ export default function Authentication() {
                     <TabsTrigger value="register">Criar conta</TabsTrigger>
                 </TabsList>
                 <TabsContent value="login">
-                    <Card>
-                        <CardHeader>
-                            <CardTitle>Login</CardTitle>
-                            <CardDescription>
-                                Faça o login para acessar sua conta.
-                            </CardDescription>
-                        </CardHeader>
-                        <CardContent className="space-y-2">
-                        </CardContent>
-                        <CardFooter>
-                            <Button>Entrar</Button>
-                        </CardFooter>
-                    </Card>
+                    <SignInForm />
                 </TabsContent>
                 <TabsContent value="register">
                     <SignUpForm />
